@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Services</title>
+  
+  <link rel="stylesheet" href="services.css" />
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #202227;
+            color: white;
+            }
+
+            /* HEADER */
+            .services-header {
+            text-align: center;
+            padding: 60px 20px;
+            }
+
+            .page-title {
+            font-size: 42px;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, crimson, orange);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            }
+
+            .back-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: crimson;
+            color: white;
+            border: none;
+            padding: 8px 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            z-index: 1000;
+            transition: 0.3s;
+            }
+
+            .back-btn:hover {
+            background: darkred;
+            }
+
+            /* SERVICES GRID */
+            .services-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            padding: 40px;
+            }
+
+            /* CARD STYLE (Same Concept as Your Effect) */
+            .service-card {
+            position: relative;
+            width: 300px;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 15px;
+            cursor: pointer;
+            }
+
+            .service-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+            }
+
+            .service-card:hover img {
+            transform: scale(1.1);
+            }
+
+            /* OVERLAY CONTENT */
+            .content {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            transform: translateY(100%);
+            transition: transform 0.5s ease;
+            }
+
+            .service-card:hover .content {
+            transform: translateY(0);
+            }
+
+            .content h2 {
+            margin: 0;
+            }
+
+            .content p {
+            font-size: 14px;
+            opacity: 0.9;
+            }
+    </style>
+
+</head>
+<body>
+
+    <button class="back-btn" onclick="goBack()">← Back</button>
+  <section class="services-header">
+    <h1 class="page-title">Our Logistics Services</h1>
+    <p>Reliable transportation and supply chain solutions worldwide</p>
+  </section>
+
+  <section class="services-container">
+
+    <!-- Freight Transport -->
+    <div class="service-card">
+      <img src="images/about.jpeg" />
+      <div class="content">
+        <h2>Freight Transport</h2>
+        <p>Efficient road, sea and air freight services across regions.</p>
+      </div>
+    </div>
+
+    <!-- Warehousing -->
+    <div class="service-card">
+      <img src="images/ser1.png" />
+      <div class="content">
+        <h2>Warehousing</h2>
+        <p>Secure storage and inventory management solutions.</p>
+      </div>
+    </div>
+
+    <!-- Supply Chain -->
+    <div class="service-card">
+      <img src="images/ser3.png" />
+      <div class="content">
+        <h2>Supply Chain Management</h2>
+        <p>Optimized logistics planning and distribution systems.</p>
+      </div>
+    </div>
+
+    <!-- Fleet Management (New Layer) -->
+    <div class="service-card">
+      <img src="images/carousel1.jpeg" />
+      <div class="content">
+        <h2>Fleet Management</h2>
+        <p>Real-time vehicle tracking and performance monitoring.</p>
+      </div>
+    </div>
+
+  </section>
+<script>
+  function goBack() {
+    window.history.back();
+  }
+</script>
+</body>
+</html>
